@@ -23,7 +23,7 @@ This egg provides an automated installation and startup configuration for Hytale
 
 ## Installation
 
-1. Download the `egg-hytale.json` file from this repository
+1. Download the `egg-hytale.pelican.json` file from this repository
 2. In your Pelican Panel, navigate to **Admin Panel** > **Eggs**
 3. Click **Import**
 4. Select the downloaded JSON file
