@@ -12,25 +12,34 @@
 
 DOWNLOADER="./hytale-downloader-linux-amd64"
 
-# Run automatic update if enabled
-if [ "${AUTOMATIC_UPDATE}" = "1" ]; then
-    # Check if the downloader exists
-    if [ ! -f "$DOWNLOADER" ]; then
-        echo "Error: Hytale downloader not found!"
-        echo "Please run the installation script first."
-        exit 1
-    fi
+# Check if the downloader exists
+if [ ! -f "$DOWNLOADER" ]; then
+    echo "Error: Hytale downloader not found!"
+    echo "Please run the installation script first."
+    exit 1
+fi
 
-    # Check if the downloader is executable
-    if [ ! -x "$DOWNLOADER" ]; then
-        echo "Setting executable permissions..."
-        chmod +x "$DOWNLOADER"
-    fi
+# Check if the downloader is executable
+if [ ! -x "$DOWNLOADER" ]; then
+    echo "Setting executable permissions..."
+    chmod +x "$DOWNLOADER"
+fi
 
+# Check if credentials file exists, if not run the updater
+if [ ! -f ".hytale-downloader-credentials.json" ]; then
+    echo "Credentials file not found, running initial setup..."
     echo "Starting Hytale downloader..."
     $DOWNLOADER -check-update
     $DOWNLOADER
 fi
+
+# Run automatic update if enabled
+if [ "${AUTOMATIC_UPDATE}" = "1" ]; then
+    echo "Starting Hytale downloader..."
+    $DOWNLOADER -check-update
+    $DOWNLOADER
+fi
+
 
 echo "Starting Hytale server..."
 
