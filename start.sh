@@ -12,15 +12,10 @@
 
 DOWNLOADER="./hytale-downloader-linux-amd64"
 
-# Create Hytale directory if it doesn't exist
-if [ ! -d "Hytale" ]; then
-    mkdir -p Hytale
-fi
-
 # Function to extract downloaded server files
 extract_server_files() {
     echo "Extracting server files..."
-    SERVER_ZIP="game.zip"
+    SERVER_ZIP="server.zip"
 
     if [ -f "$SERVER_ZIP" ]; then
         echo "Found server archive: $SERVER_ZIP"
@@ -34,6 +29,14 @@ extract_server_files() {
         fi
 
         echo "Extraction completed successfully."
+
+        # Move contents from Server folder to current directory
+        if [ -d "Server" ]; then
+            echo "Moving server files from Server directory..."
+            mv Server/* .
+            rmdir Server
+            echo "✓ Server files moved to root directory."
+        fi
 
         # Clean up the zip file
         echo "Cleaning up archive file..."
@@ -63,7 +66,7 @@ if [ ! -f ".hytale-downloader-credentials.json" ]; then
     echo "Credentials file not found, running initial setup..."
     echo "Starting Hytale downloader..."
     $DOWNLOADER -check-update
-    $DOWNLOADER -download-path game.zip
+    $DOWNLOADER -download-path server.zip
     extract_server_files
 fi
 
@@ -71,12 +74,12 @@ fi
 if [ "${AUTOMATIC_UPDATE}" = "1" ]; then
     echo "Starting Hytale downloader..."
     $DOWNLOADER -check-update
-    $DOWNLOADER -download-path game.zip
+    $DOWNLOADER -download-path server.zip
     extract_server_files
 fi
 
 # Check if server files were downloaded correctly
-if [ ! -f "Server/HytaleServer.jar" ]; then
+if [ ! -f "HytaleServer.jar" ]; then
     echo "Error: HytaleServer.jar not found!"
     echo "Server files were not downloaded correctly."
     exit 1
@@ -217,7 +220,7 @@ JAVA_CMD="java"
 
 # Add AOT cache if enabled
 if [ "${LEVERAGE_AHEAD_OF_TIME_CACHE}" = "1" ]; then
-    JAVA_CMD="${JAVA_CMD} -XX:AOTCache=Server/HytaleServer.aot"
+    JAVA_CMD="${JAVA_CMD} -XX:AOTCache=HytaleServer.aot"
 fi
 
 # Add max memory if set and greater than 0
@@ -230,7 +233,7 @@ if [ -n "${JVM_ARGS}" ]; then
     JAVA_CMD="${JAVA_CMD} ${JVM_ARGS}"
 fi
 
-JAVA_CMD="${JAVA_CMD} -jar Server/HytaleServer.jar"
+JAVA_CMD="${JAVA_CMD} -jar HytaleServer.jar"
 
 # Add assets parameter if set and ends with .zip
 if [ -n "${ASSET_PACK}" ] && [[ "${ASSET_PACK}" == *.zip ]]; then
