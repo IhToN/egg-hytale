@@ -21,9 +21,7 @@
         "Hytale": "ghcr.io/natroutter/egg-hytale:latest"
     },
     "file_denylist": [
-        "hytale-downloader-linux-amd64",
-        ".hytale-downloader-credentials.json",
-        ".hytale-auth-tokens.json"
+        "hytale-downloader-linux-amd64"
     ],
     "startup_commands": {
         "Default": "./start.sh"
