@@ -97,5 +97,5 @@ JAVA_CMD="${JAVA_CMD} --owner-uuid ${PROFILE_UUID}"
 JAVA_CMD="${JAVA_CMD} --bind 0.0.0.0:${SERVER_PORT}"
 
 # Execute the command
-echo $JAVA_CMD
+# echo $JAVA_CMD
 eval $JAVA_CMD
