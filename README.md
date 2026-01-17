@@ -5,6 +5,17 @@
 
 Panel eggs for hosting Hytale game servers on both Pelican and Pterodactyl panels.
 
+> [!IMPORTANT]
+> ## Support
+>
+> **We provide active and fast support for this project!**
+>
+> If you encounter any issues or have questions, please don't hesitate to ask. We strive to respond and resolve issues as quickly as possible.
+>
+> **How to get help:**
+> 1. **Search Existing Issues:** Check the [GitHub Issues](https://github.com/NATroutter/egg-hytale/issues) to see if your problem has already been reported or solved.
+> 2. **Open a New Issue:** If you can't find a solution, [open a new issue](https://github.com/NATroutter/egg-hytale/issues/new/choose).
+
 ## Overview
 
 This egg provides an automated installation and startup configuration for Hytale servers. It handles downloading the Hytale server files, setting up the environment, and starting the server with customizable parameters.
@@ -15,7 +26,7 @@ Both Pelican Panel and Pterodactyl Panel are fully supported with dedicated egg 
 
 - Automated Hytale server installation and updates
 - Multi-architecture support (x86_64 & ARM64)
-- Automatic `hytale-sourcequery` plugin installation
+- Automatic `hytale-sourcequery` plugin installation (Optional)
 - Built-in server validation tools (World, Assets, Prefabs)
 - Performance optimizations via AOT Cache support
 - Configurable server parameters and JVM arguments
@@ -26,8 +37,8 @@ Both Pelican Panel and Pterodactyl Panel are fully supported with dedicated egg 
 ## System Requirements
 
 | Component | Minimum | Recommended |
-| --------- | ------- | ----------- |
-| RAM       | 8 GB    | 16 GB+       |
+| --------- | ------- | ------------|
+| RAM       | 8 GB    | 16 GB+      |
 | CPU       | Intel Core i5-7500 (or equivalent), AMD Ryzen 3 1200 (or equivalent) | Intel Core i5-10400 (or equivalent), AMD Ryzen 5 3600 (or equivalent) |
 | Storage   | 10 GB   | 20 GB+      |
 
@@ -36,7 +47,7 @@ Both Pelican Panel and Pterodactyl Panel are fully supported with dedicated egg 
 | Port | Protocol | Description |
 | ---- | -------- | ----------- |
 | 5520 | UDP | Game Server Port (Default) |
-| 5521 | TCP | Query (Optional) |
+| 5521 | TCP | SourceQuery (Optional) |
 
 
 ## Installation
@@ -159,13 +170,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Pelican Panel](https://pelican.dev/)
 - [Pterodactyl Panel](https://pterodactyl.io/)
 - [Report Issues](https://github.com/NATroutter/egg-hytale/issues)
-
-## Support
-
-If you encounter any issues or have questions:
-
-- Check existing issues for solutions
-- Open an issue on GitHub
 
 ---
 

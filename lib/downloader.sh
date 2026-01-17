@@ -77,6 +77,7 @@ run_update_process() {
                 echo "$DOWNLOADER_VERSION" > $VERSION_FILE
                 logger success "Saved version info!"
                 extract_server_files
+				logger success "Server has been updated successfully!"
             else
                 logger info "Versions match, skipping update"
             fi

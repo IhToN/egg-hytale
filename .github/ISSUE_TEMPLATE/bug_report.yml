@@ -38,6 +38,41 @@ body:
       required: true
 
   - type: dropdown
+    id: panel-deployment
+    attributes:
+      label: Panel Deployment Method
+      description: How is the Panel installed?
+      options:
+        - Docker
+        - Bare Metal (Directly on machine)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: wings-deployment
+    attributes:
+      label: Wings Deployment Method
+      description: How is Wings installed?
+      options:
+        - Docker
+        - Bare Metal (Directly on machine)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: wings-location
+    attributes:
+      label: Wings Location
+      description: Is Wings running on the same machine as the Panel?
+      options:
+        - Same machine (Local)
+        - Different machine (Remote)
+    validations:
+      required: true
+
+  - type: dropdown
     id: architecture
     attributes:
       label: Server Architecture
