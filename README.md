@@ -1,7 +1,7 @@
 # Hytale Server Egg
 
-![GitHub License](https://img.shields.io/github/license/NATroutter/egg-hytale?style=for-the-badge) ![GitHub Issues](https://img.shields.io/github/issues/NATroutter/egg-hytale?style=for-the-badge)
-![GitHub Stars](https://img.shields.io/github/stars/NATroutter/egg-hytale?style=for-the-badge) ![GitHub Forks](https://img.shields.io/github/forks/NATroutter/egg-hytale?style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/IhToN/egg-hytale?style=for-the-badge) ![GitHub Issues](https://img.shields.io/github/issues/IhToN/egg-hytale?style=for-the-badge)
+![GitHub Stars](https://img.shields.io/github/stars/IhToN/egg-hytale?style=for-the-badge) ![GitHub Forks](https://img.shields.io/github/forks/IhToN/egg-hytale?style=for-the-badge)
 
 Panel eggs for hosting Hytale game servers on both Pelican and Pterodactyl panels.
 
@@ -14,8 +14,8 @@ Panel eggs for hosting Hytale game servers on both Pelican and Pterodactyl panel
 >
 >
 > **How to get help:**
-> 1. **Search Existing Issues:** Check the [GitHub Issues](https://github.com/NATroutter/egg-hytale/issues) to see if your problem has already been reported or solved.
-> 2. **Open a New Issue:** If you can't find a solution, [open a new issue](https://github.com/NATroutter/egg-hytale/issues/new/choose).
+> 1. **Search Existing Issues:** Check the [GitHub Issues](https://github.com/IhToN/egg-hytale/issues) to see if your problem has already been reported or solved.
+> 2. **Open a New Issue:** If you can't find a solution, [open a new issue](https://github.com/IhToN/egg-hytale/issues/new/choose).
 >
 > ***Please Note:** We are only humans and unfortunately we have to sleep and have lives outside of this project. Support is offered within a humanly possible timeframe, so please be patient.*
 
@@ -161,7 +161,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Hytale Official Website](https://hytale.com/)
 - [Pelican Panel](https://pelican.dev/)
 - [Pterodactyl Panel](https://pterodactyl.io/)
-- [Report Issues](https://github.com/NATroutter/egg-hytale/issues)
+- [Report Issues](https://github.com/IhToN/egg-hytale/issues)
 
 ---
 
